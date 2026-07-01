@@ -29,24 +29,28 @@
   <header class="header">
     <div class="header__inner">
 
-      <!-- Botão hambúrguer — visível só no mobile (CSS controla) -->
+      <!-- Logo sempre visível — no desktop fica no centro do menu -->
+      <a href="#inicio" class="header__logo" aria-label="Padaria Líder — voltar ao início">
+        <img src="assets/images/logo-placa.png" alt="Padaria Líder" width="90" height="90">
+      </a>
+
+      <!-- Hambúrguer: só no mobile (CSS esconde no desktop) -->
       <button class="header__menu-btn" id="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
+      <!-- Links agrupados em esquerda/direita para o desktop não quebrar em 2 linhas -->
       <nav class="header__nav" id="nav-principal" aria-label="Menu principal">
-        <a href="#inicio" class="header__link header__link--ativo">Início</a>
-        <a href="#sobre" class="header__link">Quem somos</a>
-
-        <!-- Logo central — usa a foto da placa que você enviou -->
-        <a href="#inicio" class="header__logo" aria-label="Padaria Líder — voltar ao início">
-          <img src="assets/images/logo-placa.png" alt="Padaria Líder" width="90" height="90">
-        </a>
-
-        <a href="#produtos" class="header__link">Produtos</a>
-        <a href="#contato" class="header__link">Fale conosco</a>
+        <div class="header__grupo header__grupo--esquerda">
+          <a href="#inicio" class="header__link header__link--ativo">Início</a>
+          <a href="#sobre" class="header__link">Quem somos</a>
+        </div>
+        <div class="header__grupo header__grupo--direita">
+          <a href="#produtos" class="header__link">Produtos</a>
+          <a href="#contato" class="header__link">Fale conosco</a>
+        </div>
       </nav>
 
     </div>
@@ -118,19 +122,23 @@
       <div class="contato__inner">
         <div class="contato__info">
           <p class="secao__etiqueta">Fale conosco</p>
-          <h2 class="secao__titulo">Estamos na sua esquina</h2>
+          <h2 class="secao__titulo">Estamos ansiosos por VOCÊ</h2>
           <p class="contato__endereco" id="texto-endereco"></p>
           <p class="contato__horario" id="texto-horario"></p>
           <a class="contato__whatsapp" id="contato-cta-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
             Chamar no WhatsApp
           </a>
         </div>
-        <div class="contato__mapa" aria-hidden="true">
-          <!-- Placeholder visual — depois pode virar iframe do Google Maps -->
-          <div class="contato__mapa-placeholder">
-            <span>📍</span>
-            <p>Mapa em breve</p>
-          </div>
+        <div class="contato__mapa">
+          <iframe
+            class="contato__mapa-iframe"
+            id="mapa-embed"
+            src=""
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Localização da Padaria Líder no mapa">
+          </iframe>
         </div>
       </div>
     </section>

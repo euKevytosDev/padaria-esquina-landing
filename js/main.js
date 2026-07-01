@@ -31,6 +31,11 @@ function preencherConteudo() {
   document.getElementById("texto-horario").textContent = PADARIA.horario;
   document.getElementById("footer-nome").textContent = PADARIA.nome;
 
+  const mapa = document.getElementById("mapa-embed");
+  if (mapa && PADARIA.mapsEmbedUrl) {
+    mapa.src = PADARIA.mapsEmbedUrl;
+  }
+
   // Todos os botões de WhatsApp recebem o mesmo link
   const botoesWhats = [
     document.getElementById("btn-whatsapp"),
