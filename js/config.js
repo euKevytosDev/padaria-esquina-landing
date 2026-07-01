@@ -6,6 +6,10 @@ const PADARIA = {
   nome: "Padaria Líder",
   slogan: "Tradição e qualidade em cada fornada",
 
+  // Foto do banner principal — troque pela foto real da padaria depois
+  heroImagem:
+    "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1400&q=80",
+
   // Apenas números: DDD + telefone (troque pelo número real)
   whatsapp: "31991141208",
 
@@ -38,9 +42,9 @@ const PADARIA = {
 
   // Produtos em destaque (nomes genéricos — troque pelos reais depois)
   produtos: [
-    { nome: "Pão francês", imagem: "assets/images/produto-pao.jpg" },
-    { nome: "Bolo caseiro", imagem: "assets/images/produto-bolo.jpg" },
-    { nome: "Croissant", imagem: "assets/images/produto-croissant.jpg" },
-    { nome: "Sonho", imagem: "assets/images/produto-sonho.jpg" },
+    { nome: "Pão francês", imagem: "https://media.istockphoto.com/id/1162195490/pt/foto/fresh-bread-rolls.jpg?s=612x612&w=0&k=20&c=ZUI-YCFuRjEQBeODcZ8MlQy82d2oxicqHcqRKX8JyS4=" },
+    { nome: "Bolo caseiro", imagem: "https://media.istockphoto.com/id/1313708565/pt/foto/carrot-cake-with-chocolate-icing-brazilian-cake.jpg?s=612x612&w=0&k=20&c=3l-iL0tND-_1wWCCIJ2lU23Pw5dFLc8gF8glJ4nwVrI=" },
+    { nome: "Croissant", imagem: "https://media.istockphoto.com/id/1433860471/pt/foto/mini-crescent.jpg?s=612x612&w=0&k=20&c=EwYmDM8LOxSqe3VLSKU5mQ0qrLUctc2MDRG0-J3H65g=" },
+    { nome: "Sonho", imagem: "https://media.istockphoto.com/id/460936857/pt/foto/sonho-brasileira.jpg?s=612x612&w=0&k=20&c=ajK-t0QNlHjEmAyu0SnY1P2efiqKEKPmGL6Ez4wdZ3g=" },
   ],
 };

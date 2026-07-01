@@ -31,6 +31,11 @@ function preencherConteudo() {
   document.getElementById("texto-horario").textContent = PADARIA.horario;
   document.getElementById("footer-nome").textContent = PADARIA.nome;
 
+  const hero = document.querySelector(".hero");
+  if (hero && PADARIA.heroImagem) {
+    hero.style.setProperty("--hero-bg", `url("${PADARIA.heroImagem}")`);
+  }
+
   const mapa = document.getElementById("mapa-embed");
   if (mapa && PADARIA.mapsEmbedUrl) {
     mapa.src = PADARIA.mapsEmbedUrl;
