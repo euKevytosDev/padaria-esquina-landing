@@ -114,7 +114,11 @@ function preencherProdutos() {
     nome.className = "produto-card__nome";
     nome.textContent = produto.nome;
 
-    card.append(circulo, nome);
+    const inner = document.createElement("div");
+    inner.className = "produto-card__inner";
+    inner.append(circulo, nome);
+
+    card.appendChild(inner);
     grid.appendChild(card);
   });
 }
