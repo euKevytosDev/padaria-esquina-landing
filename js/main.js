@@ -91,6 +91,9 @@ function preencherProdutos() {
     const card = document.createElement("article");
     card.className = "produto-card";
 
+    const circulo = document.createElement("div");
+    circulo.className = "produto-card__circulo";
+
     const img = document.createElement("img");
     img.className = "produto-card__img";
     img.alt = produto.nome;
@@ -102,14 +105,16 @@ function preencherProdutos() {
       const placeholder = document.createElement("div");
       placeholder.className = "produto-card__img produto-card__placeholder";
       placeholder.textContent = EMOJI_PRODUTO[indice] || "🥖";
-      card.prepend(placeholder);
+      circulo.appendChild(placeholder);
     };
+
+    circulo.appendChild(img);
 
     const nome = document.createElement("h3");
     nome.className = "produto-card__nome";
     nome.textContent = produto.nome;
 
-    card.append(img, nome);
+    card.append(circulo, nome);
     grid.appendChild(card);
   });
 }
