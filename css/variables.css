@@ -1,18 +1,41 @@
+/*
+  variables.css — "paleta de cores" do site
+  Inspirado na placa da Padaria Líder: preto, dourado e branco.
+  Para mudar o visual inteiro, altere só aqui.
+*/
 :root {
-  /* TODO (você): escolha as cores da padaria */
-  --cor-primaria: #c47a2c;
-  --cor-secundaria: #3d2914;
-  --cor-fundo: #fffaf5;
+  /* Cores da marca */
+  --cor-preta: #0d0d0d;
+  --cor-marrom: #3d2314;
+  --cor-marrom-claro: #5c3d2e;
+  --cor-dourado: #d4a03c;
+  --cor-dourado-claro: #e8b84a;
+  --cor-creme: #faf6f0;
+  --cor-branco: #ffffff;
   --cor-texto: #2b2118;
+  --cor-texto-claro: rgba(255, 255, 255, 0.92);
 
-  --fonte-titulo: Georgia, "Times New Roman", serif;
-  --fonte-texto: system-ui, -apple-system, sans-serif;
+  /* WhatsApp (padrão do app) */
+  --cor-whatsapp: #25d366;
 
-  --espaco-sm: 0.5rem;
-  --espaco-md: 1rem;
-  --espaco-lg: 2rem;
+  /* Fontes — mesma ideia do site de casamento (Google Fonts) */
+  --fonte-titulo: "Playfair Display", Georgia, serif;
+  --fonte-texto: "Montserrat", system-ui, sans-serif;
+
+  /* Espaçamentos reutilizáveis */
+  --espaco-xs: 0.5rem;
+  --espaco-sm: 1rem;
+  --espaco-md: 1.5rem;
+  --espaco-lg: 2.5rem;
   --espaco-xl: 4rem;
 
-  --raio-borda: 8px;
-  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.12);
+  /* Bordas e sombras */
+  --raio-sm: 6px;
+  --raio-md: 12px;
+  --raio-pill: 999px;
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --sombra-botao: 0 6px 24px rgba(212, 160, 60, 0.35);
+
+  /* Largura máxima do conteúdo em telas grandes */
+  --largura-max: 1200px;
 }

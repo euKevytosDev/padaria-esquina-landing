@@ -1,50 +1,44 @@
-# Padaria da Esquina — Landing Page
+# Padaria Líder — Landing Page
 
-Projeto freelancer: landing page simples, mobile-first, com botão de WhatsApp.
+Landing page freelancer para a **Padaria Líder**, mobile-first, com botão de WhatsApp.
+
+**Repositório:** https://github.com/euKevytosDev/padaria-esquina-landing
 
 ## Stack
 
-HTML, CSS e JavaScript puro — sem framework. Ideal para aprender e entregar rápido.
+HTML · CSS · JavaScript puro (sem framework)
 
 ## Estrutura
 
 ```
-padaria-esquina-landing/
-├── index.html          # estrutura da página
+├── index.html          # estrutura da página (com comentários explicativos)
 ├── css/
-│   ├── reset.css       # reset básico
-│   ├── variables.css   # cores, fontes, espaçamentos
-│   └── style.css       # estilos principais (você vai construir)
+│   ├── reset.css       # zera estilos padrão do navegador
+│   ├── variables.css   # cores, fontes e espaçamentos da marca
+│   └── style.css       # layout e visual
 ├── js/
-│   ├── config.js       # dados da padaria (nome, WhatsApp, etc.)
-│   └── main.js         # lógica do botão WhatsApp
-└── assets/
-    └── images/         # fotos da padaria
+│   ├── config.js       # dados da padaria (edite aqui!)
+│   └── main.js         # WhatsApp, menu, animações
+└── assets/images/
+    └── logo-placa.png  # foto da placa da padaria
 ```
 
-## Sua missão (passo a passo)
+## O que você pode editar agora
 
-### Etapa 1 — Conteúdo e HTML
-1. Pergunte à padaria: nome oficial, horário, endereço e número do WhatsApp.
-2. Preencha `js/config.js` com esses dados.
-3. No `index.html`, complete as seções marcadas com `<!-- TODO -->`.
+| Arquivo | O que mudar |
+|---------|-------------|
+| `js/config.js` | WhatsApp, endereço, horário, textos |
+| `css/variables.css` | Cores da marca |
+| `assets/images/` | Fotos reais dos produtos |
 
-### Etapa 2 — Visual (CSS)
-1. Escolha 2–3 cores da padaria em `css/variables.css`.
-2. Estilize a página em `css/style.css`, começando pelo mobile (320px).
-3. Teste no celular ou no DevTools (F12 → modo responsivo).
+## Abrir localmente
 
-### Etapa 3 — WhatsApp
-1. Implemente o link do botão em `js/main.js` (tem um esqueleto pronto).
-2. Formato: `https://wa.me/55DDDNUMERO` (só números, com DDI 55).
+Abra `index.html` no navegador ou use **Live Server** no Cursor.
 
-### Etapa 4 — Publicar (futuro)
-Quando estiver pronto, podemos hospedar de graça no GitHub Pages ou Netlify.
+## Próximos passos (com o cliente)
 
-## Como abrir localmente
-
-Abra o `index.html` no navegador, ou use a extensão **Live Server** no VS Code/Cursor.
-
-## Commits
-
-Autor configurado: **Raian** (`raiankevin18@gmail.com`).
+- [ ] Número real do WhatsApp
+- [ ] Endereço e horário corretos
+- [ ] Fotos dos produtos
+- [ ] Google Maps no lugar do placeholder
+- [ ] Hospedar (GitHub Pages / Netlify)
