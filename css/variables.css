@@ -1,0 +1,18 @@
+:root {
+  /* TODO (você): escolha as cores da padaria */
+  --cor-primaria: #c47a2c;
+  --cor-secundaria: #3d2914;
+  --cor-fundo: #fffaf5;
+  --cor-texto: #2b2118;
+
+  --fonte-titulo: Georgia, "Times New Roman", serif;
+  --fonte-texto: system-ui, -apple-system, sans-serif;
+
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --espaco-xl: 4rem;
+
+  --raio-borda: 8px;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.12);
+}

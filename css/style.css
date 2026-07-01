@@ -1,0 +1,31 @@
+/* ============================================================
+   style.css — ESTE ARQUIVO É SEU!
+   Comece pelo mobile (320px) e vá refinando.
+   Peça ajuda no chat quando travar em alguma parte.
+   ============================================================ */
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+/* TODO (você): estilizar header, hero, sobre, footer */
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: var(--espaco-md);
+  right: var(--espaco-md);
+  padding: var(--espaco-sm) var(--espaco-md);
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: var(--sombra-suave);
+  z-index: 100;
+}
+
+.btn-whatsapp:hover {
+  filter: brightness(1.05);
+}
