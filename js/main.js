@@ -3,7 +3,7 @@
   Responsabilidades:
     1. Montar links do WhatsApp
     2. Preencher textos a partir do config.js
-    3. Criar categorias e produtos dinamicamente
+    3. Criar categorias, produtos e experiências dinamicamente
     4. Menu mobile (hambúrguer)
     5. Animação ao rolar (revelar-scroll)
 */
@@ -60,6 +60,7 @@ function preencherConteudo() {
 
   preencherCategorias();
   preencherProdutos();
+  preencherExperiencias();
 }
 
 // ─── Cria os chips de categoria na barra marrom ───────
@@ -119,6 +120,36 @@ function preencherProdutos() {
     inner.append(circulo, nome);
 
     card.appendChild(inner);
+    grid.appendChild(card);
+  });
+}
+
+// ─── Monta os cards de "Experiência na padaria" ───────
+function preencherExperiencias() {
+  const grid = document.getElementById("grid-experiencia");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  PADARIA.experiencias.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "experiencia-card";
+
+    const icone = document.createElement("div");
+    icone.className = "experiencia-card__icone";
+    icone.textContent = item.icone;
+    // Ícone é decorativo: leitores de tela leem o título/texto, não o emoji
+    icone.setAttribute("aria-hidden", "true");
+
+    const titulo = document.createElement("h3");
+    titulo.className = "experiencia-card__titulo";
+    titulo.textContent = item.titulo;
+
+    const texto = document.createElement("p");
+    texto.className = "experiencia-card__texto";
+    texto.textContent = item.texto;
+
+    card.append(icone, titulo, texto);
     grid.appendChild(card);
   });
 }

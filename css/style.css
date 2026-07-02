@@ -507,10 +507,91 @@ body {
   }
 }
 
+/* ─── Experiência na padaria ───────────────────────── */
+.experiencia {
+  padding: var(--espaco-xl) var(--espaco-md);
+  background: var(--cor-branco);
+}
+
+.experiencia__subtitulo {
+  text-align: center;
+  color: var(--cor-marrom-claro);
+  margin: -0.5rem auto var(--espaco-lg);
+  max-width: 42ch;
+}
+
+/* Mobile: 1 coluna. Cresce para 2 e depois 4 colunas em telas maiores. */
+.experiencia__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-md);
+  max-width: var(--largura-max);
+  margin: 0 auto;
+}
+
+.experiencia-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--espaco-lg) var(--espaco-md);
+  background: var(--cor-creme);
+  border: 1px solid rgba(212, 160, 60, 0.25);
+  border-radius: var(--raio-md);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.experiencia-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--espaco-sm);
+  font-size: 2rem;
+  background: var(--cor-branco);
+  border-radius: 50%;
+  box-shadow: var(--sombra-suave);
+}
+
+.experiencia-card__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  color: var(--cor-marrom);
+  margin-bottom: var(--espaco-xs);
+}
+
+.experiencia-card__texto {
+  font-size: 0.92rem;
+  color: var(--cor-marrom-claro);
+  line-height: 1.55;
+}
+
+/* Hover só no desktop — leve elevação, igual ao clima dos produtos */
+@media (hover: hover) {
+  .experiencia-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(61, 35, 20, 0.16);
+    border-color: var(--cor-dourado);
+  }
+}
+
+@media (min-width: 600px) {
+  .experiencia__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .experiencia__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* ─── Contato ──────────────────────────────────────── */
 .contato {
   padding: var(--espaco-xl) var(--espaco-md);
-  background: var(--cor-branco);
+  background: var(--cor-creme);
 }
 
 .contato__inner {

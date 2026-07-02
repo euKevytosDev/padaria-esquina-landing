@@ -47,4 +47,28 @@ const PADARIA = {
     { nome: "Croissant", imagem: "https://media.istockphoto.com/id/1433860471/pt/foto/mini-crescent.jpg?s=612x612&w=0&k=20&c=EwYmDM8LOxSqe3VLSKU5mQ0qrLUctc2MDRG0-J3H65g=" },
     { nome: "Sonho", imagem: "https://media.istockphoto.com/id/460936857/pt/foto/sonho-brasileira.jpg?s=612x612&w=0&k=20&c=ajK-t0QNlHjEmAyu0SnY1P2efiqKEKPmGL6Ez4wdZ3g=" },
   ],
+
+  // Experiência na padaria — textos genéricos, ajuste quando conhecer a rotina real
+  experiencias: [
+    {
+      icone: "☕",
+      titulo: "Café fresquinho",
+      texto: "Comece o dia com um café passado na hora, do jeitinho que você gosta.",
+    },
+    {
+      icone: "🍳",
+      titulo: "Pão com ovo na hora",
+      texto: "Feito na chapa quando você pede — quentinho e sequinho no ponto certo.",
+    },
+    {
+      icone: "🥖",
+      titulo: "Fornada o dia todo",
+      texto: "Pães saindo do forno ao longo do dia, sempre crocantes e cheirosos.",
+    },
+    {
+      icone: "🪑",
+      titulo: "Mesinhas para sentar",
+      texto: "Um cantinho aconchegante para uma pausa no meio da correria.",
+    },
+  ],
 };
