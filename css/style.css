@@ -682,7 +682,142 @@ body {
   }
 }
 
- /*─── Rodapé ───────────────────────────────────────── */
+/* ─── Avaliações (estilo Google) ───────────────────── */
+.avaliacoes {
+  padding: var(--espaco-xl) var(--espaco-md);
+  background: var(--cor-branco);
+}
+
+.avaliacoes__subtitulo {
+  text-align: center;
+  color: var(--cor-marrom-claro);
+  margin: -0.5rem auto var(--espaco-lg);
+  max-width: 44ch;
+}
+
+.avaliacoes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-md);
+  max-width: var(--largura-max);
+  margin: 0 auto;
+}
+
+.avaliacao-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+  padding: var(--espaco-lg);
+  background: var(--cor-creme);
+  border: 1px solid rgba(212, 160, 60, 0.25);
+  border-radius: var(--raio-md);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+  .avaliacao-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-suave);
+  }
+}
+
+.avaliacao-card__topo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avaliacao-card__avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.avaliacao-card__foto {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.avaliacao-card__inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--cor-marrom);
+  color: var(--cor-creme);
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+}
+
+/* Selo "G" do Google no canto do avatar */
+.avaliacao-card__selo {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  background: var(--cor-branco);
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.avaliacao-card__selo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.avaliacao-card__meta {
+  min-width: 0;
+}
+
+.avaliacao-card__nome {
+  font-weight: 600;
+  color: var(--cor-marrom);
+  line-height: 1.2;
+}
+
+.avaliacao-card__quando {
+  font-size: 0.8rem;
+  color: var(--cor-marrom-claro);
+}
+
+.avaliacao-card__estrelas {
+  display: flex;
+  gap: 2px;
+  color: var(--cor-dourado);
+}
+
+.avaliacao-card__estrela {
+  width: 18px;
+  height: 18px;
+}
+
+.avaliacao-card__texto {
+  color: var(--cor-marrom-claro);
+  line-height: 1.7;
+}
+
+@media (min-width: 600px) {
+  .avaliacoes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .avaliacoes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── Rodapé ───────────────────────────────────────── */
 .footer {
   text-align: center;
   padding: var(--espaco-lg) var(--espaco-md);

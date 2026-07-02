@@ -61,6 +61,7 @@ function preencherConteudo() {
   preencherCategorias();
   preencherProdutos();
   preencherExperiencias();
+  preencherAvaliacoes();
 }
 
 // ─── Cria os chips de categoria na barra marrom ───────
@@ -150,6 +151,95 @@ function preencherExperiencias() {
     texto.textContent = item.texto;
 
     card.append(icone, titulo, texto);
+    grid.appendChild(card);
+  });
+}
+
+// ─── Monta as avaliações estilo Google (sem média/total) ──
+function preencherAvaliacoes() {
+  const grid = document.getElementById("grid-avaliacoes");
+  if (!grid || !PADARIA.avaliacoes) return;
+
+  grid.innerHTML = "";
+
+  // SVG de uma estrela cheia (dourada via CSS)
+  const svgEstrela =
+    '<svg class="avaliacao-card__estrela" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
+    '<path d="M12 2.25l2.955 5.988 6.61.96-4.783 4.663 1.129 6.584L12 17.302l-5.911 3.143 1.129-6.584L2.435 9.198l6.61-.96L12 2.25z"/></svg>';
+
+  PADARIA.avaliacoes.forEach((av) => {
+    const nota = Math.max(0, Math.min(5, av.nota || 5));
+
+    const card = document.createElement("article");
+    card.className = "avaliacao-card";
+
+    // Cabeçalho: avatar + (nome, quando)
+    const topo = document.createElement("div");
+    topo.className = "avaliacao-card__topo";
+
+    const avatar = document.createElement("div");
+    avatar.className = "avaliacao-card__avatar";
+
+    // Cria um avatar de letra (inicial do nome) num círculo colorido
+    const criarInicial = () => {
+      const inicial = document.createElement("span");
+      inicial.className = "avaliacao-card__inicial";
+      inicial.textContent = (av.nome || "?").charAt(0).toUpperCase();
+      if (av.cor) inicial.style.background = av.cor;
+      return inicial;
+    };
+
+    // Com foto: usa a imagem (com fallback pra inicial). Sem foto: avatar de letra.
+    if (av.foto) {
+      const foto = document.createElement("img");
+      foto.className = "avaliacao-card__foto";
+      foto.src = av.foto;
+      foto.alt = `Foto de ${av.nome}`;
+      foto.loading = "lazy";
+      foto.onerror = () => {
+        foto.remove();
+        avatar.appendChild(criarInicial());
+      };
+      avatar.appendChild(foto);
+    } else {
+      avatar.appendChild(criarInicial());
+    }
+
+    // Selo "G" do Google no canto do avatar
+    const selo = document.createElement("span");
+    selo.className = "avaliacao-card__selo";
+    selo.setAttribute("aria-hidden", "true");
+    selo.innerHTML =
+      '<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>';
+    avatar.appendChild(selo);
+
+    const meta = document.createElement("div");
+    meta.className = "avaliacao-card__meta";
+
+    const nome = document.createElement("p");
+    nome.className = "avaliacao-card__nome";
+    nome.textContent = av.nome;
+
+    const quando = document.createElement("p");
+    quando.className = "avaliacao-card__quando";
+    quando.textContent = av.quando || "";
+
+    meta.append(nome, quando);
+    topo.append(avatar, meta);
+
+    // Estrelas
+    const estrelas = document.createElement("div");
+    estrelas.className = "avaliacao-card__estrelas";
+    estrelas.setAttribute("role", "img");
+    estrelas.setAttribute("aria-label", `${nota} de 5 estrelas`);
+    estrelas.innerHTML = svgEstrela.repeat(nota);
+
+    // Texto do comentário
+    const texto = document.createElement("p");
+    texto.className = "avaliacao-card__texto";
+    texto.textContent = `"${av.texto}"`;
+
+    card.append(topo, estrelas, texto);
     grid.appendChild(card);
   });
 }

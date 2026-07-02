@@ -71,4 +71,30 @@ const PADARIA = {
       texto: "Um cantinho relaxante e descontraído para uma pausa no meio da correria.",
     },
   ],
+
+  // Avaliações de clientes (estilo Google, sem média/total).
+  // Sem "foto" => mostra a inicial do nome num círculo colorido (avatar de letra).
+  avaliacoes: [
+    {
+      nome: "Mariana Alves",
+      quando: "há 2 semanas",
+      nota: 5,
+      cor: "#3d2314",
+      texto: "Melhor pão francês do bairro! Sempre quentinho e crocante. Amo demais!",
+    },
+    {
+      nome: "Carlos Eduardo",
+      foto: "https://randomuser.me/api/portraits/men/32.jpg",
+      quando: "há 1 mês",
+      nota: 5,
+      texto: "Ótima variedade de salgados e bolos, preço justo. Recomendo demais a Padaria Líder!",
+    },
+    {
+      nome: "Juliana Ferreira",
+      quando: "há 2 meses",
+      nota: 5,
+      cor: "#8a5a2b",
+      texto: "Ambiente aconchegante pra tomar um café da manhã. Virou parada obrigatória toda semana!",
+    },
+  ],
 };
