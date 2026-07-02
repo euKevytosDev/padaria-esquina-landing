@@ -52,13 +52,13 @@ const PADARIA = {
   experiencias: [
     {
       icone: "☕",
-      titulo: "Café fresquinho",
+      titulo: "Café quentinho",
       texto: "Comece o dia com um café passado na hora, do jeitinho que você gosta.",
     },
     {
       icone: "🍳",
       titulo: "Pão com ovo na hora",
-      texto: "Feito na chapa quando você pede — quentinho e sequinho no ponto certo.",
+      texto: "Feito na chapa quando você pede — sequinho no ponto certo.",
     },
     {
       icone: "🥖",
@@ -67,8 +67,8 @@ const PADARIA = {
     },
     {
       icone: "🪑",
-      titulo: "Mesinhas para sentar",
-      texto: "Um cantinho aconchegante para uma pausa no meio da correria.",
+      titulo: "Lugar Aconchegante",
+      texto: "Um cantinho relaxante e descontraído para uma pausa no meio da correria.",
     },
   ],
 };
