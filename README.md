@@ -1,88 +1,65 @@
 # Padaria Líder — Landing Page
 
-Landing page **mobile-first** desenvolvida como projeto freelancer para a **Padaria Líder**, com foco em presença digital, vitrine de produtos e contato rápido via WhatsApp.
+Landing page que fiz pra **Padaria Líder**: uma página só, mobile-first, com vitrine de produtos e botão direto pro WhatsApp.
 
-## Demo
+Cliente real de freela. O código ficou organizado de um jeito que dá pra trocar texto, cor e contato sem caçar HTML espalhado — e depois virei template pra outra padaria (Braga).
 
-- Site ao vivo: https://eukevytosdev.github.io/padaria-esquina-landing/
-- Repositório: https://github.com/euKevytosDev/padaria-esquina-landing
+## Ao vivo
 
-## Sobre o projeto
+https://eukevytosdev.github.io/padaria-esquina-landing/
 
-Site institucional de uma página só, pensado para clientes que acessam pelo celular. A estrutura foi organizada para facilitar a personalização: textos, cores e dados da padaria ficam separados em arquivos específicos.
+## O que tem na página
 
-Este projeto também serviu de **template base** para a landing da Padaria Braga.
+- Hero, produtos, sobre, localização e contato  
+- Menu que funciona no celular  
+- WhatsApp com mensagem pronta  
+- Cores e copy centralizados em arquivos de config  
 
 ## Stack
 
-| Tecnologia | Uso |
-|---|---|
-| HTML5 | Estrutura da página |
-| CSS3 | Reset, variáveis de marca, layout responsivo |
-| JavaScript (vanilla) | Menu, WhatsApp, animações e interações |
+HTML · CSS · JavaScript puro (sem framework)
 
-## Funcionalidades
-
-- Layout responsivo (mobile-first)
-- Botão de WhatsApp com mensagem pré-definida
-- Menu de navegação com versão mobile
-- Seções: hero, produtos, sobre, localização e contato
-- Cores e textos centralizados em arquivos de configuração
-
-## Estrutura de pastas
+## Pastas
 
 ```text
 padaria-esquina-landing/
-├── index.html              # Estrutura da página (com comentários)
+├── index.html
 ├── css/
-│   ├── reset.css           # Zera estilos padrão do navegador
-│   ├── variables.css       # Cores, fontes e espaçamentos da marca
-│   └── style.css           # Layout e visual
+│   ├── reset.css
+│   ├── variables.css   # marca (cores, fonte, espaço)
+│   └── style.css
 ├── js/
-│   ├── config.js           # Dados da padaria (edite aqui!)
-│   └── main.js             # WhatsApp, menu, animações
+│   ├── config.js       # WhatsApp, endereço, textos
+│   └── main.js         # menu, WhatsApp, animações
 └── assets/images/
-    └── logo-placa.png      # Logo / foto da placa
 ```
 
-## O que editar para personalizar
+## Personalizar
 
-| Arquivo | O que mudar |
-|---|---|
+| Arquivo | Muda o quê |
+|---------|------------|
 | `js/config.js` | WhatsApp, endereço, horário, textos |
 | `css/variables.css` | Cores da marca |
-| `assets/images/` | Fotos reais dos produtos |
+| `assets/images/` | Fotos |
 
-## Como rodar localmente
+## Rodar local
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/euKevytosDev/padaria-esquina-landing.git
-   ```
-2. Abra `index.html` no navegador ou use **Live Server**.
-3. Para testar no celular: publique no GitHub Pages ou use o IP da sua máquina na rede local.
+```bash
+git clone https://github.com/euKevytosDev/padaria-esquina-landing.git
+```
+
+Abre o `index.html` ou usa Live Server.
 
 ## Deploy (GitHub Pages)
 
-1. Repositório → **Settings** → **Pages**
-2. Source: branch `main`, pasta `/ (root)`
-3. Aguarde alguns minutos — o site ficará em `https://seuusuario.github.io/padaria-esquina-landing/`
+Settings → Pages → branch `main`, pasta `/ (root)`. Em alguns minutos sobe em `https://seuusuario.github.io/padaria-esquina-landing/`.
 
-## Próximos passos (com o cliente)
+## Continuação com o cliente
 
-- [ ] Número real do WhatsApp
-- [ ] Endereço e horário definitivos
-- [ ] Fotos dos produtos
-- [ ] Google Maps no lugar do placeholder
-- [ ] Domínio próprio (opcional)
+Ainda pode entrar número definitivo do WhatsApp, fotos reais, Maps no lugar do placeholder e domínio próprio.
 
-## Projeto relacionado
-
-- Template reutilizado em: [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing)
+Template reaproveitado em: [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing)
 
 ## Autor
 
-**Raian Kevin** — Desenvolvedor Front-end
-
-- GitHub: [@euKevytosDev](https://github.com/euKevytosDev)
-- Portfólio: [portfolio-raian](https://github.com/euKevytosDev/portfolio-raian)
+Raian Kevin — [@euKevytosDev](https://github.com/euKevytosDev) · [portfólio](https://github.com/euKevytosDev/portfolio-raian)
